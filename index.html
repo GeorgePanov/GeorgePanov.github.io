@@ -10,7 +10,10 @@
     <meta name="author" content="George Panov">
     <meta name="description" content="Бакалаврская дипломная работа Георгия Панова">
 
-    <link rel="icon" href="./icon/heart_cute_emoji_emo_icon_131637.ico">
+    <!-- Это не даст iOS устройствам переводить длинные цифры в телефонный формат -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="icon" href="icon/heart_cute_emoji_emo_icon_131637.ico">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
@@ -28,7 +31,7 @@
 
         <div class="form">
             <h2>Форма</h2>
-            <form action="#" method="post" class="input">
+            <form action="{{ url_for('predict')}}" method="post" class="input" novalidate>
 
                 <div class="inputbox">
                     <label>Возраст</label>
@@ -112,8 +115,8 @@
                 </div>
 
 
-                <div class="inputbox">
-                    <button>Узнать прогноз</button>
+                <!-- <div class="inputbox">
+                    <button class="button">Узнать прогноз</button>
                 </div>
 
 
@@ -121,10 +124,15 @@
                     <label>{{ prediction_text }}</label><br>
 
                     <label>Вероятность ССЗ – </label>
-                    <label>{{ predict_probability }}</label>
-                </div>
+                    <label>{{ predict_probability }}%</label>
+                </div> -->
 
             </form>
+
+            <div class="inputbox" style="margin-top: 20px;">
+                <button class="button" id="button">Узнать прогноз</button>
+            </div>
+
         </div>
 
 
@@ -136,7 +144,8 @@
         <div class="footer-content">
             <h3>Дипломный проект</h3>
             <p>Сердечно-сосудистые заболевания являются ведущей причиной смерти во всем мире. В 2016 году число смертей
-                составило примерно 56 195 600 человек, 17,9 миллиона из которых умерли в результате сердечно-сосудистых
+                составило примерно 56 195 600 человек, 17,9 миллиона из которых умерли в результате
+                сердечно-сосудистых
                 заболеваний. Это примерно 32% всех смертей. Люди с сердечно-сосудистыми заболеваниями или с высоким
                 сердечно-сосудистым риском нуждаются в раннем выявлении и лечении. <br>
                 Цель моей бакалаврской диссертации - создать модель машинного обучения, которая может прогнозировать
@@ -156,6 +165,9 @@
         </div>
 
     </footer>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>
