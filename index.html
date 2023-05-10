@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Прогнозирование ССЗ</title>
+    <meta name="author" content="George Panov">
+    <meta name="description" content="Бакалаврская дипломная работа Георгия Панова">
+
+    <link rel="icon" href="./icon/heart_cute_emoji_emo_icon_131637.ico">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Прогнозирование развития сердечно-сосудистых заболеваний</h1>
+    </header>
+
+    <main class="main">
+
+        <div class="form">
+            <h2>Форма</h2>
+            <form action="{{ url_for('predict')}}" method="post" class="input">
+
+                <div class="inputbox">
+                    <label>Возраст</label>
+                    <input type="number" name="age" placeholder="" required>
+                </div>
+
+                <div class="inputbox">
+                    <label>Пол</label>
+                    <select name="gender" required>
+                        <option value="" selected="true" disabled="disabled">Выбрать...</option>
+                        <option value="2">Мужской</option>
+                        <option value="1">Женский</option>
+                    </select>
+                </div>
+
+                <div class="inputbox">
+                    <label>Рост</label>
+                    <input type="number" name="height" placeholder="См" required>
+                </div>
+
+                <div class="inputbox">
+                    <label>Вес</label>
+                    <input type="number" name="weight" step="0.1" placeholder="Кг" required>
+                </div>
+
+                <div class="inputbox">
+                    <label>Систолическое артериальное давление</label>
+                    <input type="number" name="ap_hi" placeholder="" required>
+                </div>
+
+                <div class="inputbox">
+                    <label>Диастолическое артериальное давление</label>
+                    <input type="number" name="ap_lo" placeholder="" required>
+                </div>
+
+                <div class="inputbox">
+                    <label>Холестерин</label>
+                    <select name="cholesterol" required>
+                        <option value="" selected="false" disabled="disabled">Выбрать...</option>
+                        <option value="1">Нормальный</option>
+                        <option value="2">Выше нормы</option>
+                        <option value="3">Сильно выше нормы</option>
+                    </select>
+                </div>
+
+                <div class="inputbox">
+                    <label>Глюкоза</label>
+                    <select name="gluc" required>
+                        <option value="" selected="false" disabled="disabled">Выбрать...</option>
+                        <option value="1">Нормальный</option>
+                        <option value="2">Выше нормы</option>
+                        <option value="3">Сильно выше нормы</option>
+                    </select>
+                </div>
+
+                <div class="inputbox">
+                    <label>Курите?</label>
+                    <select name="smoke" required>
+                        <option value="" selected="true" disabled="disabled">Выбрать...</option>
+                        <option value="1">Да</option>
+                        <option value="0">Нет</option>
+                    </select>
+                </div>
+
+                <div class="inputbox">
+                    <label>Употребляете алкоголь?</label>
+                    <select name="alco" required>
+                        <option value="" selected="true" disabled="disabled">Выбрать...</option>
+                        <option value="1">Да</option>
+                        <option value="0">Нет</option>
+                    </select>
+                </div>
+
+                <div class="inputbox">
+                    <label>Занимаетесь спортом?</label>
+                    <select name="active" required>
+                        <option value="" selected="true" disabled="disabled">Выбрать...</option>
+                        <option value="1">Да</option>
+                        <option value="0">Нет</option>
+                    </select>
+                </div>
+
+
+                <div class="inputbox">
+                    <button>Узнать прогноз</button>
+                </div>
+
+
+                <div class="prediction_text">
+                    <label>{{ prediction_text }}</label><br>
+
+                    <label>Вероятность ССЗ – </label>
+                    <label>{{ predict_probability }}</label>
+                </div>
+
+            </form>
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <h3>Дипломный проект</h3>
+            <p>Сердечно-сосудистые заболевания являются ведущей причиной смерти во всем мире. В 2016 году число смертей
+                составило примерно 56 195 600 человек, 17,9 миллиона из которых умерли в результате сердечно-сосудистых
+                заболеваний. Это примерно 32% всех смертей. Люди с сердечно-сосудистыми заболеваниями или с высоким
+                сердечно-сосудистым риском нуждаются в раннем выявлении и лечении. <br>
+                Цель моей бакалаврской диссертации - создать модель машинного обучения, которая может прогнозировать
+                сердечно-сосудистые заболевания на основе поступающих данных, тем самым помогая спасти множество жизней.
+            </p>
+            <ul class="socials">
+                <li><a href="mailto:georgepanov19@gmail.com" title="Написать на почту" target="_blank"><i
+                            class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/GeorgePanov/bachelor-s-thesis" title="Исходный код" target="_blank"><i
+                            class='fa fa-github'></i></a></li>
+                <li><a href="https://t.me/mister_glam_peach" title="Написать в Telegram" target="_blank"><i
+                            class='fa fa-telegram'></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Made by George Panov in March 2023</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
