@@ -6,12 +6,17 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
+    /* display: flex; */
+}
+
+.container {
+    height: 90vh;
     display: flex;
 }
 
 .col {
-    /* border: 1px solid #fff; */
+    /* border: 1px solid #bbb; */
     flex: 1;
     /* background: red; */
     display: flex;
@@ -43,6 +48,31 @@ body {
 }
 
 .col button:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: #3C896F;
+}
+
+footer button {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+footer button:hover {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.1);
 }
