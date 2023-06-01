@@ -8,9 +8,6 @@ document.addEventListener('keydown', (event) => {
 })
 
 
-document.querySelector('.updateColors').addEventListener('click', (setRandomColors));
-
-
 document.addEventListener('click', (event) => {
     const type = event.target.dataset.type
 
@@ -21,6 +18,8 @@ document.addEventListener('click', (event) => {
         node.classList.toggle('fa-lock');
     } else if (type === 'copy') {
         copyToClickboard(event.target.textContent)
+    } else if (type === 'button') {
+        setRandomColors(false)
     }
 })
 
