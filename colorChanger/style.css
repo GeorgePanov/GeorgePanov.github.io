@@ -53,12 +53,13 @@ body {
 
 footer {
     height: 10vh;
+    min-width: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 
-    background: #01877A;
+    background: #541469;
 }
 
 footer button {
