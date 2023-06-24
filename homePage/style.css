@@ -22,8 +22,10 @@ body {
 
 .container {
     width: 100%;
+    min-width: 1250px;
     min-height: 10vh;
     background-color: var(--light-yellow);
+    padding: 20px;
 }
 
 nav {
@@ -54,7 +56,7 @@ nav {
 
 .navItems li {
     list-style: none;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .navItems li a {
@@ -63,16 +65,57 @@ nav {
     letter-spacing: 3px;
     text-decoration: none;
     text-transform: capitalize;
+    padding: 10px 20px;
 }
 
 .navItems li:hover a {
     transition: .2s;
-    color: var(--dark-brown);
+    color: var(--dark-blue);
     background-color: var(--yellow);
+    border-radius: 10px;
 }
 
 .links a {
     font-size: 30px;
     color: var(--dark-blue);
     margin: 25px 10px;
+}
+
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 10%;
+    overflow: hidden;
+}
+
+.cols {
+    width: 50%;
+}
+
+.helloText {
+    display: block;
+    position: relative;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: var(--dark-blue);
+}
+
+h1 {
+    display: block;
+    font-size: 100px;
+    font-weight: 900;
+    color: var(--dark-blue);
+    letter-spacing: 3px;
+}
+
+.basedInText {
+    display: block;
+    position: relative;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: var(--dark-blue);
 }
