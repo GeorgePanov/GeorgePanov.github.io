@@ -2,12 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    /* height: 100vh; */
-    /* display: flex; */
+.mainContainer {
+    min-width: 650px;
 }
 
 .container {
@@ -29,6 +28,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     transition: 0.2s;
+
 }
 
 .col h2:hover {
@@ -51,28 +51,29 @@ body {
     background: rgba(0, 0, 0, 0.1);
 }
 
-footer {
+.buttonArea {
     height: 10vh;
-    min-width: 10vh;
+    /* min-width: 10vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
-    background: #541469;
+    background: #0EC3CB;
 }
 
-footer button {
+.buttonArea button {
     border: none;
     background: transparent;
+
+    color: #fff;
     font-size: 1.5rem;
-    color: #ddd;
+    font-weight: 600;
     padding: 10px;
     border-radius: 10px;
     transition: 0.2s;
 }
 
-footer button:hover {
+.buttonArea button:hover {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.1);
 }
