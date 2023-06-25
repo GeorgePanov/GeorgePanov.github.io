@@ -68,11 +68,17 @@
     padding: 10px;
     border-radius: 10px;
     transition: 0.2s;
+
+    /* Disable double-tap "zoom" */
+    touch-action: manipulation;
 }
 
 .buttonArea button:hover {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.1);
+
+    /* Disable double-tap "zoom" */
+    touch-action: manipulation;
 }
 
 
