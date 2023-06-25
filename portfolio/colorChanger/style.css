@@ -5,11 +5,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.mainContainer {
-    min-width: 650px;
-}
 
-.container {
+.colorsContainer {
     height: 90vh;
     display: flex;
 }
@@ -76,4 +73,22 @@
 .buttonArea button:hover {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media screen and (width < 767.98px) {
+    .colorsContainer {
+        /* height: 90vh; */
+        display: block;
+    }
+
+    .col {
+        height: 18vh;
+        /* border: 1px solid #bbb; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
