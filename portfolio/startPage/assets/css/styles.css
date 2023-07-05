@@ -366,15 +366,137 @@ img {
 
 
 /* ===== SKILLS =====*/
+.skills__container {
+  row-gap: 2rem;
+}
+
+.skills__subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--first-color-dark);
+  margin-bottom: var(--mb-2);
+}
+
+.skills__data {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--mb-2);
+  margin-bottom: var(--mb-4);
+}
+
+
+.skills__name {
+  text-transform: uppercase;
+}
+
+.skills__bar {
+  position: absolute;
+  bottom: -.75rem;
+  height: .25rem;
+  background-color: var(--first-color);
+}
+
+.skills__html {
+  width: 80%;
+}
+
+.skills__js {
+  width: 70%;
+}
+
+.skills__react {
+  width: 40%;
+}
+
+.skills__angular {
+  width: 90%;
+}
+
+
+.skills__php {
+  width: 80%;
+}
+
+.skills__node {
+  width: 70%;
+}
+
+.skills__firebase {
+  width: 40%;
+}
+
+.skills__python {
+  width: 90%;
+}
+
 
 
 /* ===== EDUCATION =====*/
+.education__container {
+  row-gap: 2rem;
+}
+
+.education__content {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+}
+
+.education__year,
+.education__race {
+  font-size: var(--h3-font-size);
+  margin-bottom: .25rem;
+}
+
+.education__university,
+.education__specialty {
+  display: block;
+  font-size: var(--smaller-font-size);
+}
+
+
+.education__year,
+.education__university {
+  text-align: right;
+}
+
+.education__time {
+  padding: 0 1rem;
+  justify-self: center;
+}
+
+.education__rounder {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+
+.education__rounder::before {
+  content: '';
+  position: absolute;
+  transform: translate(-4px, -4px);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--first-color);
+  border-radius: 50%;
+}
+
+.education__line {
+  display: block;
+  height: 90%;
+  width: 2px;
+  background-color: var(--first-color);
+  transform: translate(5px, -4px);
+}
+
 
 
 /* ===== SERVICES =====*/
 
 
-/* ===== PROJECT IN MIND  =====*/
+/* ===== PROJECT IN MIND =====*/
 
 
 /* ===== WORKS =====*/
@@ -386,4 +508,4 @@ img {
 /* ===== FOOTER =====*/
 
 
-/* ===== MEDIA QUERIES=====*/
+/* ===== MEDIA QUERIES =====*/

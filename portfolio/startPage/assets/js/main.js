@@ -16,13 +16,11 @@ closeMenu.addEventListener('click', () => {
 
 
 /*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('nav__link');
+const navLink = document.querySelectorAll('.nav__link');
 
-function linkAction() {
+navLink.forEach(n => n.addEventListener('click', () => {
     navMenu.classList.remove('show');
-}
-
-navLink.forEach(n => n.addEventListener('click', linkAction));
+}));
 
 
 
