@@ -5,6 +5,7 @@
 :root {
   /* =============== COLORS =============== */
   /* Color mode HSL(hue, saturation, lightness) */
+  /* You can find new colors here: https://colors.dopely.top/ */
   /* 
     Blue: hsl(207, 90%, 61%);
     Purple: hsl(250, 66%, 75%);
@@ -506,7 +507,7 @@ body.dark-theme {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 340px) {
 
   .container {
     margin-left: 1rem;
