@@ -11,12 +11,13 @@
     Purple: hsl(250, 66%, 75%);
     Pink: hsl(356, 66%, 75%);
     Teal: hsl(174, 63%, 62%);
-    hsl(196, 88, 24)
+    Crimson: hsl(343, 86, 46)
+    hsl(245, 82, 65)
     */
 
-  --hue: 196;
-  --sat: 88%;
-  --lig: 24%;
+  --hue: 245;
+  --sat: 82%;
+  --lig: 65%;
 
   --first-color: hsl(var(--hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--hue), var(--sat), calc(var(--lig) - 4%));
@@ -543,6 +544,8 @@ body.dark-theme {
   }
 }
 
+
+
 @media screen and (min-width: 776px) {
 
   .projects__content,
@@ -550,11 +553,17 @@ body.dark-theme {
     grid-template-columns: repeat(2, 332px);
   }
 
+  .projects__card {
+    height: 234px;
+  }
+
   .skills__content {
     justify-content: center;
     column-gap: 3rem;
   }
 }
+
+
 
 /* For large devices */
 @media screen and (min-width: 992px) {
