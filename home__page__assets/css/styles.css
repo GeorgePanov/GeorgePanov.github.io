@@ -432,7 +432,7 @@ body.dark-theme {
 .skills__group {
   display: grid;
   align-content: flex-start;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 
 .skills__data {
@@ -548,8 +548,8 @@ body.dark-theme {
 
 @media screen and (min-width: 776px) {
 
-  .projects__content,
-  .skills__content {
+  /* .skills__content, */
+  .projects__content {
     grid-template-columns: repeat(2, 332px);
   }
 
