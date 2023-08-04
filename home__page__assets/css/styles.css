@@ -548,7 +548,7 @@ body.dark-theme {
 
 @media screen and (min-width: 776px) {
 
-  /* .skills__content, */
+  .skills__content,
   .projects__content {
     grid-template-columns: repeat(2, 332px);
   }
